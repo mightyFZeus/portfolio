@@ -1,11 +1,20 @@
 
 import './App.css';
 import { Fragment } from 'react';
+import Home from './Components/Index';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import DrawerTest from './Components/DrawerTest';
+import NavBarTwo from './Components/NavBarTwo';
 
 function App() {
   return (
     <>
-      <h2>Welcome to the app component</h2>
+      <CssBaseline />
+        
+        {/* <Home />*/}
+        {/* <DrawerTest />  */}
+        <NavBarTwo />
+
     </>
   );
 }
