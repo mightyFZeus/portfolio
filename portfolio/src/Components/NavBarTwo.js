@@ -81,7 +81,7 @@ render() {
 								open={isDrawerOpened} 
 								anchor={"top"}
 								onClose={this.closeDrawer}
-								style={styles.menuSliderContainer}
+							
 								>
 									
 								<List component='nav' >
