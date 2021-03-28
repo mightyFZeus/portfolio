@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  
 }
 
 .App-logo {
@@ -8,7 +8,7 @@
   pointer-events: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,600&display=swap');
+
 
 
   
