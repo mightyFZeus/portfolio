@@ -9,7 +9,6 @@ import {
     IconButton,
     ListItemText,
     ListItemIcon,
-    Avatar,
     Divider,
     List,
     Typography,
@@ -21,7 +20,8 @@ import {
     AssignmentInd,
     Home,
     Apps,
-    ContactMail
+	ContactMail,
+	Menu
 } from '@material-ui/icons'
 
 
@@ -30,7 +30,10 @@ import {
  menuSliderContainer:{
 	width: 150,
 	background:'#511',
-	height:'30rem'
+	height:'100%'
+ },
+ listColor:{
+	 color:'tan'
  }
  };
 
@@ -55,11 +58,7 @@ closeDrawer = () => {
 	})
 }
 
-drawerHeightChanged = () => {
-	this.setState({
-		Style:{height: 'calc(100% - 64px)', top: 64}
-	})
-}
+
 render() {
 	const { isDrawerOpened } = this.state;
 	return (
@@ -70,7 +69,7 @@ render() {
 				<AppBar style={{background:'#222'}}>
 					<Toolbar style={{display:'flex'}}>
 						<IconButton onClick={this.toggleDrawerStatus} style={{display:'flex'}}>
-						<ArrowBack style={{color:'tomato'}}/> 
+						<Menu style={{color:'tomato'}}/> 
 						</IconButton>
 						<Typography style={{color:'tan'}}>
 							Portfolio
@@ -81,45 +80,37 @@ render() {
 								<Drawer
 								variant="temporary"
 								open={isDrawerOpened} 
-								anchor={"top"}
+								anchor={"right"}
 								onClose={this.closeDrawer}
-							
 								>
 									
-								<List component='nav' >
+								<List component='nav' style={styles.menuSliderContainer}>
 									<ListItem button key='Home' >
 										<ListItemIcon><Home/>
 										</ListItemIcon>
-										<ListItemText primary='Home' />
+										<ListItemText  style={styles.listColor} primary='Home' />
 									</ListItem>
-								<ListItem button key='Apps'>
-									<ListItemIcon><Apps/>
+									<ListItem button key='Apps'>
+										<ListItemIcon><Apps/>
+										</ListItemIcon>
+										<ListItemText primary='Apps' style={styles.listColor} />
+									</ListItem>
+									<ListItem button key='contact'>
+										<ListItemIcon><ContactMail/>
+										</ListItemIcon>
+										<ListItemText primary=' Contacts' style={styles.listColor} />
+									</ListItem>
+
+									<ListItem button key='Resume'>
+									<ListItemIcon>
+										<AssignmentInd />
 									</ListItemIcon>
-									<ListItemText primary='Apps' />
-								</ListItem>
-								<ListItem button key='contact'>
-									<ListItemIcon><ContactMail/>
-									</ListItemIcon>
-									<ListItemText primary=' Contacts' />
-								</ListItem>
+									<ListItemText primary='Resume' style={styles.listColor} />
+									</ListItem>
 
-								<ListItem button key='Resume'>
-								<ListItemIcon>
-									<AssignmentInd />
-								</ListItemIcon>
-								<ListItemText primary='Resume' />
-								</ListItem>
-
-								</List>
-
-								
-
-							
-							
-								
-						
-							</Drawer>
-						</Box>
+									</List>
+								</Drawer>
+							</Box>
 					</Toolbar>
 				</AppBar>
 			</Box>
