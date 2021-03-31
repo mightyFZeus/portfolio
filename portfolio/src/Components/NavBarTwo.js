@@ -64,7 +64,9 @@ render() {
 	const { isDrawerOpened } = this.state;
 	return (
 		<>
-			<Box component='nav' >
+			<Box component='nav' 
+			
+			>
 				<AppBar>
 					<Toolbar style={{display:'flex'}}>
 						<IconButton onClick={this.toggleDrawerStatus} style={{display:'flex'}}>
