@@ -67,12 +67,12 @@ render() {
 			<Box component='nav' 
 			
 			>
-				<AppBar>
+				<AppBar style={{background:'#222'}}>
 					<Toolbar style={{display:'flex'}}>
 						<IconButton onClick={this.toggleDrawerStatus} style={{display:'flex'}}>
-						<ArrowBack/> 
+						<ArrowBack style={{color:'tomato'}}/> 
 						</IconButton>
-						<Typography>
+						<Typography style={{color:'tan'}}>
 							Portfolio
 						</Typography>
 					

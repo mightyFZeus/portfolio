@@ -5,6 +5,7 @@ import Home from './Components/Index';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import DrawerTest from './Components/DrawerTest';
 import NavBarTwo from './Components/NavBarTwo';
+import Header from './Components/Header';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         {/* <Home />*/}
         {/* <DrawerTest />  */}
         <NavBarTwo />
+        <Header />
 
     </>
   );
